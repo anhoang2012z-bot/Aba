@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fake Hack</title>
+<style>
+body{
+  background:black;
+  color:lime;
+  font-family:monospace;
+  padding:20px;
+}
+</style>
+</head>
+<body>
+<pre id="out"></pre>
+
+<script>
+const lines = [
+"Connecting...",
+"Bypassing firewall...",
+"Access denied...",
+"Trying again...",
+"Loading...",
+"😂 Chỉ là trò đùa!",
+"Không có tài khoản nào bị lấy cả."
+];
+
+let i = 0;
+const out = document.getElementById("out");
+
+const timer = setInterval(() => {
+  out.textContent += lines[i] + "\n";
+  i++;
+  if (i >= lines.length) clearInterval(timer);
+}, 1000);
+</script>
+</body>
+</html>
